@@ -11,7 +11,7 @@ import java.util.List;
 
 public class FoodListActivity extends AppCompatActivity {
 
-    private List<Food> listOfFoods;
+    private ArrayList<Food> listOfFoods;
     private GridView mGridView;
     private ArrayAdapter myArrayAdapter;
 
@@ -23,23 +23,22 @@ public class FoodListActivity extends AppCompatActivity {
         listOfFoods = loadFood();
 
         mGridView = (GridView)findViewById(R.id.grdFoodList);
-        myArrayAdapter = new ArrayAdapter(this,R.layout.food_list_item,listOfFoods);
+        //myArrayAdapter = new ArrayAdapter(this,R.layout.food_list_item,listOfFoods);
+        myArrayAdapter = new FoodAdapter(this,R.layout.food_list_item,listOfFoods);
 
-        if (mGridView!=null)
-        {
-           // mGridView.setAdapter(myArrayAdapter);
-
+        if (mGridView!=null) {
+            mGridView.setAdapter(myArrayAdapter);
         }
 
     }
 
-    private List<Food> loadFood() {
+    private ArrayList<Food> loadFood() {
 
         ArrayList<Food> tmpFoods = new ArrayList<Food>();
 
         tmpFoods.add(new Food("Hot Hot", "Real hot thing. This will burn your tong", 666.00));
-        tmpFoods.add(new Food("Blaaaaaa", "Disgusting thing that will make you throw up ", 12.34));
-        tmpFoods.add(new Food("Hot Hot", "Real hot thing. This will burn your tong", 666.00));
+        tmpFoods.add(new Food("Blaaaaaarggghhhhhh", "Disgusting thing that will make you throw up ", 12.34));
+        tmpFoods.add(new Food("Nothing", "Nothing", 666.00));
         tmpFoods.add(new Food("Hot Hot", "Real hot thing. This will burn your tong", 666.00));
         tmpFoods.add(new Food("Hot Hot", "Real hot thing. This will burn your tong", 666.00));
 
