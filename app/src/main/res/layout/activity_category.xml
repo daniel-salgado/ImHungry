@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context="br.com.dssproject.imhungry.FoodCategoryActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnPizza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pizza" />
+
+            <Button
+                android:id="@+id/btnChineseFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chinese Food" />
+
+            <Button
+                android:id="@+id/btnDessert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dessert" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnHamburguer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hamburguer" />
+
+            <Button
+                android:id="@+id/btnBrazilianFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brazilian Food" />
+
+            <Button
+                android:id="@+id/btnBaravarege"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Baravarege" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
