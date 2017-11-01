@@ -7,12 +7,11 @@ import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class FoodListActivity extends AppCompatActivity {
 
     private ArrayList<Food> listOfFoods;
-    private GridView mGridView;
+    private ListView mListView;
     private ArrayAdapter myArrayAdapter;
 
     @Override
@@ -22,12 +21,12 @@ public class FoodListActivity extends AppCompatActivity {
 
         listOfFoods = loadFood();
 
-        mGridView = (GridView)findViewById(R.id.grdFoodList);
+        mListView = (ListView)findViewById(R.id.grdFoodList);
         //myArrayAdapter = new ArrayAdapter(this,R.layout.food_list_item,listOfFoods);
         myArrayAdapter = new FoodAdapter(this,R.layout.food_list_item,listOfFoods);
 
-        if (mGridView!=null) {
-            mGridView.setAdapter(myArrayAdapter);
+        if (mListView !=null) {
+            mListView.setAdapter(myArrayAdapter);
         }
 
     }
