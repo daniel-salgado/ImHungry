@@ -3,8 +3,12 @@ package br.com.dssproject.imhungry;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,23 +16,69 @@ import java.util.List;
 public class FoodListActivity extends AppCompatActivity {
 
     private ArrayList<Food> listOfFoods;
-    private GridView mGridView;
+    private ListView mGridView;
     private ArrayAdapter myArrayAdapter;
+
+    Button btnDecrFoodQuantity;
+    Button btnIncrFoodQuantity;
+    TextView txtFoodQuantity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_list);
 
+        btnDecrFoodQuantity = (Button) findViewById(R.id.btnDecrFoodQuantity);
+        btnIncrFoodQuantity = (Button) findViewById(R.id.btnIncrFoodQuantity);
+        txtFoodQuantity = (TextView) findViewById(R.id.txtFoodQuantity);
+
         listOfFoods = loadFood();
 
-        mGridView = (GridView)findViewById(R.id.grdFoodList);
+        mGridView = (ListView) findViewById(R.id.grdFoodList);
         //myArrayAdapter = new ArrayAdapter(this,R.layout.food_list_item,listOfFoods);
-        myArrayAdapter = new FoodAdapter(this,R.layout.food_list_item,listOfFoods);
+        myArrayAdapter = new FoodAdapter(this, R.layout.food_row_layout, listOfFoods);
 
-        if (mGridView!=null) {
+        if (mGridView != null) {
             mGridView.setAdapter(myArrayAdapter);
         }
+
+    }
+
+    public void btnChangeFoodQuantity(View view) {
+
+        Integer viewPosition = (Integer) view.getTag();
+        Food food = listOfFoods.get(viewPosition);
+
+        switch (view.getId()) {
+            case (R.id.btnIncrFoodQuantity):
+                food.addFoodQuantity();
+
+                break;
+            case (R.id.btnDecrFoodQuantity):
+                food.subFoodQuantity();
+                break;
+
+        }
+
+        updateSetTopState(viewPosition, food);
+
+
+    }
+
+//WorkArround to get the list updated
+    //https://stackoverflow.com/questions/3724874/how-can-i-update-a-single-row-in-a-listview
+    private void updateSetTopState(int index, Food food) {
+        View v = mGridView.getChildAt(index -
+                mGridView.getFirstVisiblePosition()+mGridView.getHeaderViewsCount());
+
+        if(v == null)
+            return;
+
+        TextView txtFoodQuantity = (TextView) v.findViewById(R.id.txtFoodQuantity);
+        txtFoodQuantity.setVisibility(View.VISIBLE);
+
+        txtFoodQuantity.setText(String.valueOf(food.getFoodQuantity()));
 
     }
 

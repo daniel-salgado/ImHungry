@@ -10,10 +10,14 @@ public class Food {
     private String foodDescription;
     private double foddPrice;
 
+
+    private int foodQuantity;
+
     public Food(String foodName, String foodDescription, double foddPrice) {
         this.foodName = foodName;
         this.foodDescription = foodDescription;
         this.foddPrice = foddPrice;
+        this.foodQuantity = 0; //Default value
     }
 
     public Food() {
@@ -44,5 +48,25 @@ public class Food {
         this.foddPrice = foddPrice;
     }
 
+    public int getFoodQuantity() {
+        return foodQuantity;
+    }
+
+    public void setFoodQuantity(int foodQuantity) {
+        this.foodQuantity = foodQuantity;
+    }
+
+    public void addFoodQuantity() {
+        this.foodQuantity++;
+    }
+
+    public void subFoodQuantity() {
+
+        if (foodQuantity <= 0)
+            this.foodQuantity = 0;
+        else
+            this.foodQuantity--;
+
+    }
 
 }

@@ -6,14 +6,11 @@
     android:layout_height="match_parent"
     tools:context="br.com.dssproject.imhungry.FoodListActivity">
 
-    <GridView
+    <ListView
         android:id="@+id/grdFoodList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnWidth="100dp"
         android:layout_gravity="center|bottom"
-        android:horizontalSpacing="10dp"
-        android:layout_margin="20dp"
-        android:numColumns="2"/>
+        />
 
 </LinearLayout>

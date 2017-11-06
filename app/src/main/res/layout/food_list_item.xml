@@ -16,22 +16,40 @@
 
     <TextView
         android:id="@+id/txtFoodTitle"
-        android:text="Food Title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Food Title" />
 
     <TextView
         android:id="@+id/txtFoodSubTitle"
-        android:text="Food Sub Title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Food Sub Title" />
 
     <TextView
         android:id="@+id/txtFoodPrice"
-        android:text="$ 27.95"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:text="$ 27.95" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 
 </LinearLayout>
