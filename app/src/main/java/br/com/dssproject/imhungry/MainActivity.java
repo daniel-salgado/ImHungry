@@ -1,5 +1,6 @@
 package br.com.dssproject.imhungry;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(MainActivity.this,"Hey", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(this, FoodListActivity.class);
+
+
 
         startActivity(intent);
 

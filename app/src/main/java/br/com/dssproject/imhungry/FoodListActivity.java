@@ -15,19 +15,19 @@ import java.util.List;
 
 public class FoodListActivity extends AppCompatActivity {
 
-    private ArrayList<Food> listOfFoods;
-    private ListView mGridView;
-    private ArrayAdapter myArrayAdapter;
-
     Button btnDecrFoodQuantity;
     Button btnIncrFoodQuantity;
     TextView txtFoodQuantity;
-
+    private ArrayList<Food> listOfFoods;
+    private ListView mGridView;
+    private ArrayAdapter myArrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_list);
+
+        overridePendingTransition(R.anim.grow_from_middle, R.anim.shrink_to_middle);
 
         btnDecrFoodQuantity = (Button) findViewById(R.id.btnDecrFoodQuantity);
         btnIncrFoodQuantity = (Button) findViewById(R.id.btnIncrFoodQuantity);
@@ -66,13 +66,13 @@ public class FoodListActivity extends AppCompatActivity {
 
     }
 
-//WorkArround to get the list updated
+    //WorkArround to get the list updated
     //https://stackoverflow.com/questions/3724874/how-can-i-update-a-single-row-in-a-listview
     private void updateSetTopState(int index, Food food) {
-        View v = mGridView.getChildAt(index -
-                mGridView.getFirstVisiblePosition()+mGridView.getHeaderViewsCount());
 
-        if(v == null)
+        View v = mGridView.getChildAt(index - mGridView.getFirstVisiblePosition() + mGridView.getHeaderViewsCount());
+
+        if (v == null)
             return;
 
         TextView txtFoodQuantity = (TextView) v.findViewById(R.id.txtFoodQuantity);

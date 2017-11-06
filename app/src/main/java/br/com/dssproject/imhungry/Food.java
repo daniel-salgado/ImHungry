@@ -62,9 +62,7 @@ public class Food {
 
     public void subFoodQuantity() {
 
-        if (foodQuantity <= 0)
-            this.foodQuantity = 0;
-        else
+        if (foodQuantity > 0)
             this.foodQuantity--;
 
     }

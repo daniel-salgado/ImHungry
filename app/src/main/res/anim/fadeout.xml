@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--https://stackoverflow.com/questions/10243557/how-to-apply-slide-animation-between-two-activities-in-android-->
+
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_interpolator"
+    android:fromAlpha="1.0" android:toAlpha="0.0" android:duration="2000" />
