@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.dssproject.imhungry.FoodListActivity">
+    tools:context="br.com.dssproject.imhungry.FoodListActivity"
+    android:background="@drawable/background01">
 
     <ListView
         android:id="@+id/grdFoodList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center|bottom"
+
         />
 
 </LinearLayout>

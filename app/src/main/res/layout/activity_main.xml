@@ -4,16 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.dssproject.imhungry.MainActivity"
-    android:background="@drawable/background01">
+    android:background="@drawable/background01"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context="br.com.dssproject.imhungry.MainActivity">
 
 
-    <ImageButton
-        android:id="@+id/imgHungry"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearTop"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="btnHungry"
-        app:srcCompat="@drawable/imhungry" />
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:scaleType="fitEnd"
+            android:src="@drawable/logo1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:scaleType="fitStart"
+            android:src="@drawable/logo2" />
+
+    </LinearLayout>
 
 
 </LinearLayout>
+
+    <!--http://www5.flamingtext.com/net-fu/jobs/25332818823017509.html-->
