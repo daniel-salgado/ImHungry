@@ -1,134 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="180dp"
+    android:layout_marginTop="1dp"
     android:alpha="0.95"
-    >
+    android:background="#F4F4F4">
 
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="1dp"
-        android:background="#F4F4F4"
->
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="5dp">
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
             <ImageView
                 android:id="@+id/desimage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
+                android:layout_weight="2"
                 android:src="@mipmap/ic_launcher" />
 
-            <TextView
-                android:id="@+id/txtFoodTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Chicken Pizza Small"
-                android:textSize="21sp"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtFoodSubTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Chicken Pizza Small Combo"
-                android:textColor="#8c8181"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/txtFoodTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Chicken Pizza Small"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:maxWidth="100dp"/>
 
+                <TextView
+                    android:id="@+id/txtFoodSubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Chicken Pizza Small Combo"
+                    android:textColor="#8c8181"
+                    android:textSize="16sp"
+                    android:maxWidth="100dp"
+                    android:maxLines="4"
+                    android:lines="4"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="10">
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:textAllCaps="false"
+                android:textColor="#ffffff">
 
-                <LinearLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price" />
+
+                <TextView
+                    android:id="@+id/txtFoodPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10.00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="7"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/btnDecrFoodQuantity"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="3"
-                    android:orientation="vertical"
-                    android:textAllCaps="false"
-                    android:textColor="#ffffff">
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:onClick="btnChangeFoodQuantity"
+                    android:text="-"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="25dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Price" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#c0c0c0" />
 
-                    <TextView
-                        android:id="@+id/txtFoodPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10.00" />
-
-                </LinearLayout>
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/txtFoodQuantity"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="7"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="1" />
 
-                    <Button
-                        android:id="@+id/btnDecrFoodQuantity"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        android:onClick="btnChangeFoodQuantity"
-                        android:text="-"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="25dp" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#c0c0c0" />
 
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="#c0c0c0" />
+                <Button
+                    android:id="@+id/btnIncrFoodQuantity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:onClick="btnChangeFoodQuantity"
+                    android:text="+"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="25dp" />
 
-                    <TextView
-                        android:id="@+id/txtFoodQuantity"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:inputType="number"
-                        android:text="1" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="#c0c0c0" />
-
-                    <Button
-                        android:id="@+id/btnIncrFoodQuantity"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        android:onClick="btnChangeFoodQuantity"
-                        android:text="+"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="25dp" />
-
-                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
-    </RelativeLayout>
 
+    </LinearLayout>
 
 </RelativeLayout>
+
+
