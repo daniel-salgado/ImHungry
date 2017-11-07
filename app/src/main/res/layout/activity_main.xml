@@ -7,7 +7,7 @@
     android:background="@drawable/background01"
     android:orientation="vertical"
     android:weightSum="2"
-    tools:context="br.com.dssproject.imhungry.MainActivity">
+    tools:context="br.com.dssproject.imhungry.view.MainActivity">
 
 
     <LinearLayout

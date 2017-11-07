@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,11 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FoodCategoryActivity" />
+        <activity android:name=".view.FoodCategoryActivity" />
         <activity
-            android:name=".FoodListActivity"
+            android:name=".view.FoodListActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".OrderDetailsActivity"></activity>
+        <activity android:name=".view.OrderDetailsActivity"></activity>
     </application>
 
 </manifest>

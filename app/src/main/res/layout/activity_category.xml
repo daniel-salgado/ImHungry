@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context="br.com.dssproject.imhungry.FoodCategoryActivity">
+    tools:context="br.com.dssproject.imhungry.view.FoodCategoryActivity">
 
 
     <LinearLayout

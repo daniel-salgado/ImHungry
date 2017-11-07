@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background01"
     android:orientation="vertical"
-    tools:context="br.com.dssproject.imhungry.OrderDetailsActivity">
+    tools:context="br.com.dssproject.imhungry.view.OrderDetailsActivity">
 
     <ListView
         android:id="@+id/lstOrderDetails"

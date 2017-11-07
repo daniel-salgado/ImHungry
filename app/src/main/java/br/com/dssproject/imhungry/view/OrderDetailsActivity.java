@@ -1,7 +1,9 @@
-package br.com.dssproject.imhungry;
+package br.com.dssproject.imhungry.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import br.com.dssproject.imhungry.R;
 
 public class OrderDetailsActivity extends AppCompatActivity {
 
