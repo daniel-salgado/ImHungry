@@ -3,6 +3,7 @@ package br.com.dssproject.imhungry.view;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -47,6 +48,14 @@ public class OrderDetailsActivity extends AppCompatActivity {
 
         txtTotalPrice.setText("$ " + String.format("%.2f", calcTotal()));
 
+
+    }
+
+    public void btnCheckOut(View view)
+    {
+
+        Intent intent = new Intent(this, DeliveryDetailsActivity.class);
+        startActivity(intent);
 
     }
 

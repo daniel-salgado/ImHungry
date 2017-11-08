@@ -23,7 +23,15 @@
         <activity
             android:name=".view.FoodListActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".view.OrderDetailsActivity"></activity>
+        <activity
+            android:name=".view.OrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.DeliveryDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.DeliveryStatusActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
