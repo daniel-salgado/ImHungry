@@ -1,10 +1,12 @@
 package br.com.dssproject.imhungry.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by danie on 10/30/2017.
  */
 
-public class Food {
+public class Food implements Serializable{
 
     private String foodName;
     private String foodDescription;

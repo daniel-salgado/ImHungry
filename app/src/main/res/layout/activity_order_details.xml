@@ -9,13 +9,13 @@
     tools:context="br.com.dssproject.imhungry.view.OrderDetailsActivity">
 
     <ListView
-        android:id="@+id/lstOrderDetails"
+        android:id="@+id/orderDetailsListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
         android:layout_weight="2"
         android:alpha="0.9"
-        android:background="#FBF8F7">
+        android:background="@color/colorWhite">
 
     </ListView>
 
@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#FBF8F7">
+        android:background="@color/colorWhite">
 
 
         <LinearLayout
@@ -38,43 +38,36 @@
                 android:gravity="right"
                 android:paddingRight="5dp"
                 android:text="Total"
-                android:textColor="#000000"
+                android:textColor="@color/colorBlack"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/txtTotalPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$ 10.00"
-                android:textColor="#4F546A"
+                android:textColor="@color/colorBlue"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
-
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="4"
             android:layout_margin="5dp">
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"/>
+                android:layout_weight="4"/>
 
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-
-
 
 
 </LinearLayout>

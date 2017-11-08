@@ -58,7 +58,6 @@ public class FoodAdapter extends ArrayAdapter<Food>
 
             row.setTag(holder);
 
-
         }
         else
         {
@@ -74,13 +73,11 @@ public class FoodAdapter extends ArrayAdapter<Food>
         holder.txtFoodPrice.setText(String.valueOf(food.getFoddPrice()));
         holder.txtFoodQuantity.setText(String.valueOf(food.getFoodQuantity()));
 
-
         holder.btnIncrFoodQuantity = (Button) row.findViewById(R.id.btnIncrFoodQuantity);
         holder.btnIncrFoodQuantity.setTag(position);
 
         holder.btnDecrFoodQuantity = (Button) row.findViewById(R.id.btnDecrFoodQuantity);
         holder.btnDecrFoodQuantity.setTag(position);
-
 
         return row;
 
@@ -95,6 +92,5 @@ public class FoodAdapter extends ArrayAdapter<Food>
         Button btnDecrFoodQuantity;
 
     }
-
 
 }

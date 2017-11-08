@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                Intent intent = new Intent(MainActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(MainActivity.this, FoodListActivity.class);
                 startActivity(intent);
                 MainActivity.this.finish();
             }

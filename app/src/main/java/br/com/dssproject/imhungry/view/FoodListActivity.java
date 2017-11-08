@@ -1,9 +1,11 @@
 package br.com.dssproject.imhungry.view;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -22,7 +24,7 @@ public class FoodListActivity extends AppCompatActivity {
     Button btnIncrFoodQuantity;
     TextView txtFoodQuantity;
     private ArrayList<Food> listOfFoods;
-    private ListView mGridView;
+    private ListView foodListView;
     private ArrayAdapter myArrayAdapter;
 
     @Override
@@ -38,12 +40,12 @@ public class FoodListActivity extends AppCompatActivity {
 
         listOfFoods = loadFood();
 
-        mGridView = (ListView) findViewById(R.id.grdFoodList);
-        //myArrayAdapter = new ArrayAdapter(this,R.layout.food_list_item,listOfFoods);
+        foodListView = (ListView) findViewById(R.id.grdFoodList);
+
         myArrayAdapter = new FoodAdapter(this, R.layout.food_row_layout, listOfFoods);
 
-        if (mGridView != null) {
-            mGridView.setAdapter(myArrayAdapter);
+        if (foodListView != null) {
+            foodListView.setAdapter(myArrayAdapter);
         }
 
     }
@@ -55,6 +57,39 @@ public class FoodListActivity extends AppCompatActivity {
         return true;
     }
 
+    //https://stackoverflow.com/questions/7479992/handling-a-menu-item-click-event-android
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.action_cart:
+
+                ArrayList<Food> orderItems = new ArrayList<Food>();
+
+                for (Food food : listOfFoods) {
+
+                    if (food.getFoodQuantity() > 0)
+                        orderItems.add(food);
+
+                }
+
+
+                if (orderItems.size() > 0) {
+
+                    Intent intent = new Intent(this, OrderDetailsActivity.class);
+                    intent.putExtra("order_items", orderItems);
+
+                    startActivity(intent);
+
+
+                }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+
+    }
 
     public void btnChangeFoodQuantity(View view) {
 
@@ -81,7 +116,7 @@ public class FoodListActivity extends AppCompatActivity {
     //https://stackoverflow.com/questions/3724874/how-can-i-update-a-single-row-in-a-listview
     private void updateSetTopState(int index, Food food) {
 
-        View v = mGridView.getChildAt(index - mGridView.getFirstVisiblePosition() + mGridView.getHeaderViewsCount());
+        View v = foodListView.getChildAt(index - foodListView.getFirstVisiblePosition() + foodListView.getHeaderViewsCount());
 
         if (v == null)
             return;
