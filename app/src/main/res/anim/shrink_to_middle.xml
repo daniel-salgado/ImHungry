@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--https://stackoverflow.com/questions/8570906/android-flip-animation-using-xml-for-animation-in-android -->
 <set xmlns:android="http://schemas.android.com/apk/res/android">
     <scale
         android:interpolator="@android:anim/linear_interpolator"
@@ -14,4 +15,3 @@
         android:duration="200"/>
 </set>
 
-    <!--https://stackoverflow.com/questions/8570906/android-flip-animation-using-xml-for-animation-in-android -->

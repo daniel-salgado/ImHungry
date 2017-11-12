@@ -18,105 +18,105 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_margin="5dp">
+            android:layout_margin="5dp"
+            android:orientation="vertical">
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/delivery_datails"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:weightSum="5">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delivery_datails"
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:paddingTop="50dp">
+                android:weightSum="5">
 
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Name" />
-
-                <EditText
-                    android:id="@+id/txtClientName"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/your_name"
-                    android:inputType="textPersonName"
-                    android:selectAllOnFocus="true"
-                    android:singleLine="true" />
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:paddingTop="50dp">
 
-                <TextView
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name" />
+
+                    <EditText
+                        android:id="@+id/txtClientName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/your_name"
+                        android:inputType="textPersonName"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address" />
+
+                    <EditText
+                        android:id="@+id/txtClientPostalAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/address_full"
+                        android:inputType="textPostalAddress"
+                        android:lines="3"
+                        android:maxLines="3"
+                        android:minLines="3"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="false" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email" />
+
+                    <EditText
+                        android:id="@+id/txtClientEmailAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="me@with-hungry.co.nz"
+                        android:inputType="textEmailAddress" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phone" />
+
+                    <EditText
+                        android:id="@+id/txtClientPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|number|phone" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Address" />
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/txtClientPostalAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/address_full"
-                    android:inputType="textPostalAddress"
-                    android:lines="3"
-                    android:maxLines="3"
-                    android:minLines="3"
-                    android:selectAllOnFocus="true"
-                    android:singleLine="false" />
+                    <Button
+                        android:id="@+id/btnPlaceOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="btnPlaceOrder"
+                        android:text="@string/place_order" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email" />
-
-                <EditText
-                    android:id="@+id/txtClientEmailAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="me@with-hungry.co.nz"
-                    android:inputType="textEmailAddress" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Phone" />
-
-                <EditText
-                    android:id="@+id/txtClientPhoneNumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="phone" />
+                </LinearLayout>
 
             </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="bottom"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/btnPlaceOrder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="btnPlaceOrder"
-                    android:text="Vai" />
-
-            </LinearLayout>
-
-        </LinearLayout>
 
         </LinearLayout>
 

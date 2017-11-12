@@ -41,13 +41,10 @@ public class OrderDetailsActivity extends AppCompatActivity {
         orderDetailsListView = (ListView) findViewById(R.id.orderDetailsListView);
         myArrayAdapter = new OrderAdapter(this, R.layout.order_item_layout, orderItems);
 
-        if (orderDetailsListView != null) {
+        if (orderDetailsListView != null)
             orderDetailsListView.setAdapter(myArrayAdapter);
-        }
-
 
         txtTotalPrice.setText("$ " + String.format("%.2f", calcTotal()));
-
 
     }
 
@@ -64,7 +61,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         double totalPrice = 0;
 
         for (Food orderItem : orderItems)
-            totalPrice = +orderItem.getFoddPrice() * orderItem.getFoodQuantity();
+            totalPrice =  totalPrice + (orderItem.getFoddPrice() * orderItem.getFoodQuantity());
 
         return totalPrice;
     }

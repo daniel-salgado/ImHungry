@@ -10,8 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
 
         <LinearLayout
@@ -74,10 +73,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_weight="3"
                 android:orientation="vertical"
-                android:textAllCaps="false"
-                android:textColor="#ffffff">
+                android:textAllCaps="false">
 
                 <TextView
                     android:layout_width="wrap_content"
