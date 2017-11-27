@@ -132,7 +132,7 @@ public class FoodListActivity extends AppCompatActivity {
 
         ArrayList<Food> tmpFoods = new ArrayList<Food>();
 
-        tmpFoods.add(new Food("Hot Hot", "Real hot thing. This will burn your tong", 666.00));
+        tmpFoods.add(new Food("Beats Burger", "100% grass fed Angus beef, aioli, lettuce, tomato, smashed koftas, cheddar cheese, streaky bacon, and BBQ sauce.", 666.00));
         tmpFoods.add(new Food("Blaaaaaarggghhhhhh", "Disgusting thing that will make you throw up ", 12.34));
         tmpFoods.add(new Food("Nothing", "Nothing", 666.00));
         tmpFoods.add(new Food("Hot Hot", "Real hot thing. This will burn your tong", 666.00));

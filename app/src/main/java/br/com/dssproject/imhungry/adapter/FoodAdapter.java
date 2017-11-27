@@ -1,17 +1,22 @@
 package br.com.dssproject.imhungry.adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
 import br.com.dssproject.imhungry.domain.Food;
 import br.com.dssproject.imhungry.R;
+import br.com.dssproject.imhungry.view.FoodListActivity;
 
 /**
  * Created by danie on 10/30/2017.
@@ -73,15 +78,22 @@ public class FoodAdapter extends ArrayAdapter<Food>
         holder.txtFoodPrice.setText(String.valueOf(food.getFoddPrice()));
         holder.txtFoodQuantity.setText(String.valueOf(food.getFoodQuantity()));
 
+        //int resId = FoodListActivity.getResources().getIdentifier("testimage", "drawable", Activity.getPackageName());
+        //image.setImageResource(resId);
+
+
         holder.btnIncrFoodQuantity = (Button) row.findViewById(R.id.btnIncrFoodQuantity);
         holder.btnIncrFoodQuantity.setTag(position);
 
         holder.btnDecrFoodQuantity = (Button) row.findViewById(R.id.btnDecrFoodQuantity);
         holder.btnDecrFoodQuantity.setTag(position);
 
+
+
         return row;
 
     }
+
 
     private static class FoodHolder{
         TextView txtFoodTitle;
@@ -90,6 +102,7 @@ public class FoodAdapter extends ArrayAdapter<Food>
         TextView txtFoodQuantity;
         Button btnIncrFoodQuantity;
         Button btnDecrFoodQuantity;
+        ImageView imgFood;
 
     }
 

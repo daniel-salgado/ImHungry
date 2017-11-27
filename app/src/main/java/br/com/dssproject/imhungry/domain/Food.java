@@ -11,6 +11,7 @@ public class Food implements Serializable{
     private String foodName;
     private String foodDescription;
     private double foddPrice;
+    private String foodImage;
 
 
     private int foodQuantity;
@@ -67,6 +68,14 @@ public class Food implements Serializable{
         if (foodQuantity > 0)
             this.foodQuantity--;
 
+    }
+
+    public String getFoodImage() {
+        return foodImage;
+    }
+
+    public void setFoodImage(String foodImage) {
+        this.foodImage = foodImage;
     }
 
 }
